@@ -65,7 +65,7 @@ def cadastrar():
 
     for u in usuarios:
         if usuario_novo == u["user"]:
-            return "<h1>Usuário já existente</h1>"
+            return render_template("cadastro.html", fail_2=True)
     
     with open("usuarios.txt", "a") as arquivo:
         arquivo.write(f"{usuario_novo};{senha_novo}\n")
