@@ -16,14 +16,20 @@
         </nav>
     </header>
     
-
     <section class="container">
-        <form action="/inicio" method="POST">
+        <form id="formLogin" action="/inicio" method="POST">
             <label>Usuário:</label><br>
             <input type="text" name="usuario" required><br><br>
             <label>Senha:</label><br>
             <input type="password" name="senha" required><br><br>
             <button type="submit">Entrar</button>
+            
+            {% if fail %}
+            <script>
+                alert("Senha ou usuário incorreto!")
+            </script>
+            {% endif %}    
+            
         </form>
 
         <h2>Se não possui cadastro, clique aqui a baixo</h2>
@@ -31,8 +37,6 @@
             <button type="button">Clique aqui</button>
         </a>
     </section>
-
-    
 
 </body>
 </html>

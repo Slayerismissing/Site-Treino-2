@@ -49,9 +49,9 @@ def entrar():
 
     for u in usuarios:
         if usuario_digitado == u["user"] and senha_digitada == u["senha"]:
-            return  f"<h1>Bem-vindo, {usuario_digitado}!</h1>"
+            return render_template("inicial.html")
 
-    return "<h1>Usuário ou senha incorretos</h1>"
+    return render_template("login.html", fail=True)
 
 
 
