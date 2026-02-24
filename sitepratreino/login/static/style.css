@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+
+    --background: #556f97;
+    --colorbox: #bbdfdf;
+    
+
+    /* Aqui vai as fontes */
+    --fonte: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+body{
+    background-color: var(--background); 
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte);
+}
+
+
+header h1{
+    margin: 35px auto;
+    font-size: auto;
+    text-align: center;
+    background-color: var(--colorbox);
+    width: 30%;
+    border-radius: 10px;
+}
+
+
+.container{
+    margin: 35px auto;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+
+.container ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+
+.container li{
+    background-color: var(--colorbox);
+    list-style: none;
+    border-radius: 5px;
+}
+

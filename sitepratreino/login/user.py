@@ -33,10 +33,13 @@ def login():
 def pagina_cadastro():
     return render_template("cadastro.html")
 
+@app.route("/inicio")
+def pagina_inicio():
+    return render_template("inicial.html")
 
 
 # Quando o usuário enviar o formulário
-@app.route("/entrar", methods=["POST"])
+@app.route("/inicio", methods=["POST"])
 def entrar():
 
     usuario_digitado = request.form["usuario"]
@@ -46,7 +49,7 @@ def entrar():
 
     for u in usuarios:
         if usuario_digitado == u["user"] and senha_digitada == u["senha"]:
-            return f"<h1>Bem-vindo, {usuario_digitado}!</h1>"
+            return  f"<h1>Bem-vindo, {usuario_digitado}!</h1>"
 
     return "<h1>Usuário ou senha incorretos</h1>"
 
