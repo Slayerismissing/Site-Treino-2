@@ -1,2 +1,0 @@
-# usuario;senha
-Kevin;1234
