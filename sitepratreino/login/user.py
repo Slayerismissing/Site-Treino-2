@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request
 
+
 app = Flask(__name__)
 
 
 # Função para ler usuários do .txt
 def carregar_usuarios():
+
     usuarios = []
 
     try:
@@ -60,12 +62,12 @@ def cadastrar():
 
     for u in usuarios:
         if usuario_novo == u["user"]:
-            return "<h1> Usuário/Senha já existente</h1>"
+            return "<h1>Usuário já existente</h1>"
     
     with open("usuarios.txt", "a") as arquivo:
         arquivo.write(f"{usuario_novo};{senha_novo}\n")
 
-    return "<h1>Usuário criado com sucesso!</h1>"
+    return login()
 
 if __name__ == "__main__":
     app.run(debug=True)
