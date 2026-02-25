@@ -64,27 +64,21 @@ header h1{
     border-radius: 5px;
 }
 
-/* .layout {
-    display: flex;
-    min-height: 100vh;
+.layout{
+    margin-left: 1%;
+    background-color: var(--colorbox);
+    width: 15%;
+    height: 100vh;
 }
 
-.sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
+hr{
+    background-color: black;
+    width: auto;
+    height: 2.5px;
 }
-
-.conteudo {
-    flex: 1;
-    padding: 40px;
-} */
-
-
 
 .bloco{
-    margin: 35px auto;
+    margin-right: 25px;    
     background-color: var(--colorbox);
     text-align: center;
     width: 50%;
