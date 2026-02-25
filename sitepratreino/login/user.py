@@ -23,6 +23,7 @@ def carregar_usuarios():
     return usuarios
 
 
+############################ PÁGINAS ######################
 # Página de login
 @app.route("/")
 def login():
@@ -38,6 +39,8 @@ def pagina_inicio():
     return render_template("inicial.html")
 
 
+
+############### FUNÇÃO PRAS ROTAS ######################################
 # Quando o usuário enviar o formulário
 @app.route("/inicio", methods=["POST"])
 def entrar():
@@ -52,7 +55,6 @@ def entrar():
             return render_template("inicial.html")
 
     return render_template("login.html", fail=True)
-
 
 
 @app.route("/cadastro", methods=["POST"])
