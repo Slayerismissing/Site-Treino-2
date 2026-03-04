@@ -2,55 +2,101 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root{
-
-    --background: #556f97;
-    --colorbox: #bbdfdf;
-    
-
-    /* Aqui vai as fontes */
-    --fonte: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-
-body{
-    background-color: var(--background); 
+*{
     margin: 0;
     padding: 0;
-    font-family: var(--fonte);
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-header h1{
-    margin: 35px auto;
-    font-size: auto;
-    text-align: center;
-    background-color: var(--colorbox);
-    width: 30%;
-    border-radius: 10px;
+body{
+    background-color: #e5e5e5;
 }
 
+/* Header */
+.topbar{
+    background-color: #a6a3a3;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    gap: 20px;
+}
 
+.logo-box{
+    width: 50px;
+    height: 50px;
+    background-color: #3b2626;
+    border-radius: 12px;
+}
+
+.topbar h2{
+    font-weight: normal;
+}
+
+/* Centralização */
 .container{
-    margin: 35px auto;
-    text-align: center;
-    font-size: 25px;
-
-}
-
-
-.container ul{
+    height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 0;
+    align-items: center;
 }
 
-
-.container li{
-    background-color: var(--colorbox);
-    list-style: none;
-    border-radius: 5px;
+/* Card */
+.card{
+    background-color: #cfcfcf;
+    width: 400px;
+    padding: 40px;
 }
 
+.card h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle{
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Form */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 24px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+input{
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #9b9b9b;
+    font-size: 16px;
+    color: white;
+}
+
+input::placeholder{
+    color: #e5e5e5;
+}
+
+button{
+    margin-top: 40px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background-color: #5c5f5e;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    opacity: 0.85;
+}

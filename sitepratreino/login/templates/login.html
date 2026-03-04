@@ -2,41 +2,37 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../static/index.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Data Insight - Login</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
 
-    <header>
-        <nav>
-            <h1>Tela de Login</h1>
-        </nav>
+    <header class="topbar">
+        <div class="logo-box"></div>
+        <h2>Data insight</h2>
     </header>
-    
-    <section class="container">
-        <form id="formLogin" action="/inicio" method="POST">
-            <label>Usuário:</label><br>
-            <input type="text" name="usuario" required><br><br>
-            <label>Senha:</label><br>
-            <input type="password" name="senha" required><br><br>
-            <button type="submit">Entrar</button>
-            
-            {% if fail %}
-            <script>
-                alert("Senha ou usuário incorreto!")
-            </script>
-            {% endif %}    
-            
-        </form>
 
-        <h2>Se não possui cadastro, clique aqui a baixo</h2>
-        <a href="/cadastro">
-            <button type="button">Clique aqui</button>
-        </a>
-    </section>
+    <main class="container">
+        <div class="card">
+
+            <h1>Entrar</h1>
+            <p class="subtitle">Lorem ipsum algum ritmo iscotic</p>
+
+            <form>
+                <label>email</label>
+                <input type="email" placeholder="exemplo@gmail.com">
+
+                <label>senha</label>
+                <input type="password" placeholder="senha">
+
+                <button type="submit">login</button>
+
+                <a href="cadastro.html">Cadastrar</a>
+            </form>
+
+        </div>
+    </main>
 
 </body>
 </html>

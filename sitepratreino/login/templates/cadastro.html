@@ -4,36 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../static/index.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-           <h1>Inicie seu cadastro</h1> 
-        </nav>
+    <header class="topbar">
+        <div class="logo-box"></div>
+        <h2>Data insight</h2>
     </header>
-    
 
-    <section class="container">
-        <form id="formCadastro" action="/cadastro" method="POST">
-            <label>Usuário</label><br>
-            <input type="text" name="usuario" required><br><br>
-            <label>Senha</label><br>
-            <input type="password" name="senha" required><br><br>
-            <button type="submit" id="Feito">Feito</button>
+    <main class="container">
+        <div class="card">
 
-            <script>
-                document.getElementById("formCadastro").addEventListener("submit", function(event){
-                    alert("Cadastro Enviado!")
-                });
-            </script>
+            <h1>Cadastrar</h1>
+            <p class="subtitle">Faça o seu cadastro</p>
 
-        </form>
-    </section>
+            <form>
+                <label>email</label>
+                <input type="email" placeholder="exemplo@gmail.com">
 
+                <label>senha</label>
+                <input type="password" placeholder="senha">
+
+                <button type="submit">Cadastrar</button>
+            </form>
+
+        </div>
+    </main>
 
 </body>
 </html>
