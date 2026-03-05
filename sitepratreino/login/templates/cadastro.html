@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
 
 <body>
 
     <header class="topbar">
         <div class="logo-box"></div>
-        <h2>Data insight</h2>
+        <h2>Psicologia C&A</h2>
     </header>
 
     <main class="container">
@@ -21,14 +21,22 @@
             <h1>Cadastrar</h1>
             <p class="subtitle">Faça o seu cadastro</p>
 
-            <form>
+            <form action="/cadastro" method="post"> 
                 <label>email</label>
-                <input type="email" placeholder="exemplo@gmail.com">
+                <input type="email" name="email" placeholder="exemplo@gmail.com">
 
                 <label>senha</label>
-                <input type="password" placeholder="senha">
+                <input type="password" name="senha" placeholder="senha">
 
                 <button type="submit">Cadastrar</button>
+
+                {% if error %}
+                <script>
+                    alert("email já existente")
+                </script>   
+                {% endif %}
+
+
             </form>
 
         </div>
