@@ -2,32 +2,43 @@ body{
     background-color: rgb(89, 120, 121);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
-    padding: 0;
+
 }
 
 
-h1{
+.navegation{
     background-color: #f0f8ff;
     margin: 0%;
     padding: 0.5%;
-    justify-content: left;
     border-style: solid;
-
 }
 
-
-.container{
-    margin: 35px auto;
-    text-align: center;
-    background-color: #f0f8ff;
-    width: 25%;
-    height: 100%;
-    border-radius: 10px;
+.navegation h1{
+    font-size: 30px;
 }
 
+.navegation a{
+    text-align: right;
+}
 
 
 button{
     margin: 10px;
     font-size: medium;
+
 }
+
+.bloco{
+    background-color: #f0f8ff;
+    text-align: center;
+    width: 20%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
